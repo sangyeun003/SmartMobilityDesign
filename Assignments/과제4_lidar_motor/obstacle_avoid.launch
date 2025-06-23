@@ -1,0 +1,10 @@
+<launch>
+	<!-- Motor node -->
+	<include file="$(find xycar_motor)/launch/xycar_motor.launch" />
+
+	<!-- Lidar mode -->
+	<include file="$(find xycar_lidar)/launch/lidar.launch" />
+
+	<!-- Driver node -->
+	<node name="lidar_driver" pkg="lidar_drive" type="obstacle_avoid.py" output="screen" />
+</launch>

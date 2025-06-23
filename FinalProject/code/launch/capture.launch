@@ -1,0 +1,7 @@
+<launch>
+	<!-- Camera node -->
+	<include file="$(find usb_cam)/launch/usb_cam.launch" />
+
+	<!-- Capture node -->
+	<node name="capture" pkg="final" type="capture.py" output="screen" />
+</launch>

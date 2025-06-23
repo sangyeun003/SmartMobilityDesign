@@ -1,0 +1,15 @@
+<launch>
+	<node pkg="my_msg" type="msg_send_param.py" name="sender1">
+		<param name="firstname" type="string" value="Sangyeun" />
+		<param name="lastname" type="string" value="Park" />
+		<param name="phone" type="string" value="010-0000-0000" />
+		<param name="id" type="int" value="2000000000" />
+	</node>
+	<node pkg="my_msg" type="msg_send_param.py" name="sender2">
+		<param name="firstname" type="string" value="Smart" />
+		<param name="lastname" type="string" value="Mobility" />
+		<param name="phone" type="string" value="02-6490-1114" />
+		<param name="id" type="int" value="38162" />
+	</node>
+	<node pkg="my_msg" type="msg_recv.py" name="receiver" output="screen" />
+</launch>

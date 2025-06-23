@@ -1,0 +1,13 @@
+<launch>
+	<!-- Motor node -->
+	<include file="$(find xycar_motor)/launch/xycar_motor.launch" />
+
+	<!-- Lidar node -->
+	<include file="$(find xycar_lidar)/launch/lidar_noviewer.launch" />
+
+	<!-- Camera node -->
+	<include file="$(find usb_cam)/launch/usb_cam.launch" />
+
+	<!-- Driver node -->
+	<node name="xycar" pkg="final" type="car.py" output="screen" />
+</launch>

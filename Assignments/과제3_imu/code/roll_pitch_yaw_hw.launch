@@ -1,0 +1,7 @@
+<launch>
+	<!-- Imu node -->
+	<include file="$(find xycar_imu)/launch/xycar_imu.launch" />
+
+	<node pkg="my_imu" type="roll_pitch_yaw_hw.py" name="Imu_Direction_Monitor" output="screen" />
+
+</launch>
